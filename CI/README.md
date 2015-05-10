@@ -16,7 +16,7 @@ where $\bar{x}$ is the sample mean, $\hat{\sigma}$ is the standard deviation of 
 
 The visualization shows the CIs that miss the real value of the parameter ($\mu = 0$) in red, and the ones that contain the real value in green. By playing with the variables, the user can observe their effects in the number of intervals that "miss the target" (which is regulated only by $\alpha$) and the width of the intervals (which is a function of $\alpha,\ n$ and $\sigma$). The "play" buttons can be used to animate the individual effects.
 
-The code for this app is avaliable [here](https://github.com/vittorfp/Shiny-Apps) and [here](https://github.com/fcampelo/).
+The code for this app is avaliable [here](https://github.com/vittorfp/Shiny-Apps) and [here](https://github.com/fcampelo/Design-and-Analysis-of-Experiments).
 
 ## More information
 - [Wikipedia](http://en.wikipedia.org/wiki/Confidence_interval)
