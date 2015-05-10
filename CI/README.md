@@ -1,11 +1,35 @@
-
-This app has the objective of demonstrating the Confidence Intervals theory and familiarize the user with the related variables.
+## Confidence Intervals Demo
+The objective of this app is to demonstrate the variables involved in the calculation of confidence intervals for the mean of a normal variable, and the ways in which these variables influence the precision and width of these intervals.
  
-The user can change parameters such as Significance level, mean, number of intervals, sample size and standard deviation.
+The following parameters can be manipulated by the user:
 
-The App generates randomic values of samples and then, acording with the parameters, plots the intervals, marking with red the ones that doesn't contain the mean value, and with green the ones that contain. The number of red intervals tend to be proportional to the value of significance level and the number of intervals tested (Intervals * Significance).
+- Significance level ($\alpha$)  
+- Number of intervals to be generated ($K$)  
+- Sample size used for each interval ($n$)  
+- Standard deviation of the underlying distribution ($\sigma$)
 
-By pressing the play buttons the user can see in a dyinamic way how the plot changes with the variation of one parameter.
+The app generates $K$ random samples (each consisting of $n$ observations) from a Gaussian distribution $N(0,\sigma^2)$, and for each sample calculates the confidence interval using the formula for unknown variances:
 
-Code avaliable [here](https://github.com/vittorfp/Shiny-Apps).
+$$ \bar{x}\pm\frac{\hat{\sigma}}{\sqrt{n}}t_{1-\alpha/2;(n-1)}$$
 
+where $\bar{x}$ is the sample mean, $\hat{\sigma}$ is the standard deviation of the sample, and $t_{1-\alpha/2;(n-1)}$ is the $(1-\alpha/2)$-quantile of the t distribution with $n-1$ degrees of freedom.
+
+The visualization shows the CIs that miss the real value of the parameter ($\mu = 0$) in red, and the ones that contain the real value in green. By playing with the variables, the user can observe their effects in the number of intervals that "miss the target" (which is regulated only by $\alpha$) and the width of the intervals (which is a function of $\alpha,\ n$ and $\sigma$). The "play" buttons can be used to animate the individual effects.
+
+The code for this app is avaliable [here](https://github.com/vittorfp/Shiny-Apps) and [here](https://github.com/fcampelo/Design-and-Analysis-of-Experiments).
+
+## More information
+- [Wikipedia](http://en.wikipedia.org/wiki/Confidence_interval)
+- [Lecture Notes](https://github.com/fcampelo/Design-and-Analysis-of-Experiments/tree/master/04-StatisticalIntervals)
+- [Statistical Intervals](https://www.sas.com/resources/whitepaper/wp_4430.pdf)
+
+
+## Makers
+This app was originally implemented for the _Design and Analysis of Experiments_ lectures offered by Prof. Felipe Campelo to the Graduate Program in Electrical Engineering, Universidade Federal de Minas Gerais, Brazil.
+
+<div style="background-color:#eeeeee; width:600px">
+<strong>Authors</strong>: [Vittor Faria](mailto:vittorfpereira@gmail.com) and [Felipe Campelo](mailto:fcampelo@ufmg.br)<br/>
+ORCS Lab - Operational Research and Complex Systems Laboratory<br/>
+Department of Electrical Engineering, Universidade Federal de Minas Gerais<br/>
+Belo Horizonte, Brazil</i>
+</div>
