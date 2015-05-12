@@ -3,9 +3,9 @@ The objective of this app is to demonstrate the variables involved in the calcul
  
 The following parameters can be manipulated by the user:
 
-- Significance level ($\alpha$)  
-- Number of intervals to be generated ($K$)  
-- Sample size used for each interval ($n$)  
+- Significance level ($\alpha$);
+- Number of intervals to be generated ($K$);
+- Sample size used for each interval ($n$);
 - Standard deviation of the underlying distribution ($\sigma$)
 
 The app generates $K$ random samples (each consisting of $n$ observations) from a Gaussian distribution $N(0,\sigma^2)$, and for each sample calculates the confidence interval using the formula for unknown variances:

@@ -1,7 +1,15 @@
 shinyUI(fluidPage(
     #Title
-    titlePanel("Confidence Intervals"),
+    # titlePanel("Confidence Intervals"),
     
+    # Readme
+    fluidRow(
+          column(12,
+                 includeHTML("README.html")
+          )
+    ),
+    hr(),
+    hr(),
     #Sidebar Panel
     sidebarLayout(
         position = "right",
@@ -57,9 +65,7 @@ shinyUI(fluidPage(
                 label   = h5("Random seed"),
                 value   = 1, 
                 min     = 1,
-                max     = 999999),
-            #
-            br()
+                max     = 999999)
             ),
         #
         #Main Panel
