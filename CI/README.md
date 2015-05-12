@@ -1,3 +1,9 @@
+---
+output:
+  html_document:
+    mathjax         : default
+---
+
 ## Confidence Intervals Demo
 The objective of this app is to demonstrate the variables involved in the calculation of confidence intervals for the mean of a normal variable, and the ways in which these variables influence the precision and width of these intervals.
  
